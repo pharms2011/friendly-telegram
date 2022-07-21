@@ -6,11 +6,9 @@ interface Props {
     isDark: boolean;
 }
 
-const midLinks = [
-    {title: 'catalog', path: '/catalog'},
-    {title: 'about', path: '/about'},
-    {title: 'contact', path: '/contact'}
-]
+// const midLinks = [
+
+// ]
 
 const rightLinks = [
     {title: 'login', path: '/login'},
@@ -23,13 +21,13 @@ export default function Header(props: Props) {
             <AppBar position='static' sx={{ mb: 4 }}>
                 <Toolbar>
                     <Typography variant='h6'>
-                        RE-STORE
+                        Mikal Williams
                     </Typography>
                     <Switch
                         checked={props.isDark}
                         onChange={props.toggleDarkMode}
                     />
-                    <List sx={{display:'flex'}}>
+                    {/* <List sx={{display:'flex'}}>
                         {midLinks.map(({title, path})=>(
                             <ListItem 
                                 key={title}
@@ -40,7 +38,7 @@ export default function Header(props: Props) {
                                 {title.toUpperCase()}
                             </ListItem>
                         ))}
-                    </List>
+                    </List> */}
                     <List sx={{display:'flex'}}>
                         {rightLinks.map(({title, path})=>(
                             <ListItem 
