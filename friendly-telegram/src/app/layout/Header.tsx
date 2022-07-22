@@ -20,7 +20,7 @@ export default function Header(props: Props) {
         <>
             <AppBar position='static' sx={{ mb: 4 }}>
                 <Toolbar>
-                    <Typography variant='h6'>
+                    <Typography variant='h4'>
                         Mikal Williams
                     </Typography>
                     <Switch
