@@ -1,5 +1,6 @@
-import { AppBar, List, ListItem, Switch, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, List, ListItem, Switch, Toolbar, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import SocialMedaiHeader from "../../features/SocialMediaHeader/SocialMediaHeader";
 
 interface Props {
     toggleDarkMode: () => void;
@@ -11,8 +12,8 @@ interface Props {
 // ]
 
 const rightLinks = [
-    {title: 'login', path: '/login'},
-    {title: 'register', path: '/register'}
+    { title: 'login', path: '/login' },
+    { title: 'register', path: '/register' }
 ]
 
 export default function Header(props: Props) {
@@ -20,37 +21,21 @@ export default function Header(props: Props) {
         <>
             <AppBar position='static' sx={{ mb: 4 }}>
                 <Toolbar>
-                    <Typography variant='h4'>
-                        Mikal Williams
-                    </Typography>
-                    <Switch
-                        checked={props.isDark}
-                        onChange={props.toggleDarkMode}
-                    />
-                    {/* <List sx={{display:'flex'}}>
-                        {midLinks.map(({title, path})=>(
-                            <ListItem 
-                                key={title}
-                                component={NavLink}
-                                to={path}
-                                sx={{color: 'inherit', typography:'h6'}}
-                            >
-                                {title.toUpperCase()}
-                            </ListItem>
-                        ))}
-                    </List> */}
-                    <List sx={{display:'flex'}}>
-                        {rightLinks.map(({title, path})=>(
-                            <ListItem 
-                                key={title}
-                                component={NavLink}
-                                to={path}
-                                sx={{color: 'inherit', typography:'h6'}}
-                            >
-                                {title.toUpperCase()}
-                            </ListItem>
-                        ))}
-                    </List>
+                    <Box>
+                        <Typography 
+                        variant='h4' 
+                        className='name'
+                        sx={{
+                            fontFamily: 'Square Peg'
+                        }}>
+                            Mikal Williams
+                        </Typography>
+                        <Switch
+                            checked={props.isDark}
+                            onChange={props.toggleDarkMode}
+                        />
+                        <SocialMedaiHeader />
+                    </Box>
                 </Toolbar>
             </AppBar>
         </>

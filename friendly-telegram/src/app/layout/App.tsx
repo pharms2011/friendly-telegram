@@ -11,6 +11,18 @@ function App() {
   const palletType = darkMode ? 'dark' : 'light';
   const theme = createTheme({
     palette: {
+      primary: {
+        light: '#4db6ac',
+        main: '#4db6ac',
+        dark: '#00867d',
+        contrastText: '#000000',
+      },
+      secondary: {
+        light: '#fffff7',
+        main: '#fff9c4',
+        dark: '#cbc693',
+        contrastText: '#000000',
+      },
       mode: palletType,
       background: {
         default: palletType === 'light' ? '#eaeaea' : '#121212'
