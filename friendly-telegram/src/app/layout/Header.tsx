@@ -1,6 +1,6 @@
 import { AppBar, Box, List, ListItem, Switch, Toolbar, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import SocialMedaiHeader from "../../features/SocialMediaHeader/SocialMediaHeader";
+import SocialMedaiHeader from "../../features/links/SocialMediaHeader";
 
 interface Props {
     toggleDarkMode: () => void;
